@@ -1,0 +1,40 @@
+*{
+    margin:-15px;
+}
+.swing{
+    animation:swing ease-in-out 1.8s infinite alternate;
+    transform-origin: center 0;
+    position: absolute;
+    left: 551px;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    top: -30px;
+}
+.swing after{
+    content:"";
+    position: absolute;
+    width:50px;
+    height: 50px;
+    top:-40px;
+    left:100px;
+    z-index: 0;
+    transform: rotate(80deg);
+}
+.swing:before{
+    content:"";
+    position: absolute;
+    width:50px;
+    height: 50px;
+    top: -37px;
+    left:52px;
+    z-index: 5;
+}
+@keyframes swing {
+    0%{
+        transform: rotate(100deg);
+    }
+    100%{
+        transform: rotate(-23deg);
+    }
+}
